@@ -11,14 +11,15 @@ const allCategories = [
     [protest, 'protestSongs', 'Protest'],
     [covers, 'coverSongs', "Covers"]
 ];
-const allCatLen = allCategories.length;
-const arraysLength = getAllArraysLength();
+let allCatLen = allCategories.length;
+let arraysLength = getAllArraysLength();
 let currentSong = "";
 
 function getAllArraysLength() {
     let len = 0;
-    for (a = 0; a < allCatLen - 1; a++) {
+    for (a = 0; a < allCatLen; a++) {
         len = len + allCategories[a][0].length;
+
     };
 
     return len;
@@ -46,9 +47,10 @@ function getUnusedItem() {
         let categoryEntry = chosenTitles;
         document.getElementById("answer1").innerText = chosenTitles[1];
         document.getElementById("answer2").innerText = '"' + chosenTitles[2] + '"';
+        document.getElementById("songsPlayed").innerText = playedSongArray.length;
+        document.getElementById("songsRemaining").innerText = arraysLength - playedSongArray.length;
 
         showInstructions(chosenCatName);
-
         getTitles(chosenSongArray, catNum, itemNum, arraysLength);
 
         return currentSong;
@@ -100,6 +102,7 @@ function getRandom(num) {
 
 
 function getTitles(songCat, songCatNum, currRand, allLength) {
+    console.log("Alllength: ", allLength);
 
     let titleGroup = allCategories[songCatNum][0][currRand];
 

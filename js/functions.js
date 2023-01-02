@@ -67,8 +67,8 @@ function chooseSong(array_name, categoryName, group, buttonID) {
         resetButtonColors(buttonID);
         groupName = "All";
         playedSongArray = [];
-        document.getElementById("songsPlayed").innerText = playedSongArray.length;
-        document.getElementById("songsRemaining").innerText = arraysLength - playedSongArray.length;
+        //document.getElementById("songsPlayed").innerText = playedSongArray.length;
+        //document.getElementById("songsRemaining").innerText = arraysLength - playedSongArray.length;
 
     }
 
