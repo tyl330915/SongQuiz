@@ -157,4 +157,8 @@ const covers = [
     [156, "Wilburt Harrison (Bryan Ferry)", "Let's Stick Together"],
     [157, "Bob Marley (Eric Clapton)", "I Shot The Sheriff"],
     [158, "Keane (Lily Allen)", "Somewhere Only We Know"],
+    [159, "Rod Stewart", "Reason to Believe"],
+    [160, "Funboy Three", "Our Lips Are Sealed"],
+    [161, "Roxy Music", "Jealous Guy"],
+
 ];
