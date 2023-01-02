@@ -99,7 +99,6 @@ const twoThousands = [
     [98, "Usher, Pitbull", "DJ Got Us Fallin' In Love"],
     [99, "will.i.am, Britney Spears", "Scream & Shout"],
     [100, "50 Cent", "In Da Club"],
-
-
+    [101, "FatBoy Slim", "Weapon of Choice"],
 
 ];

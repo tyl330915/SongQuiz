@@ -96,6 +96,11 @@ const nineties = [
     [95, "The Prodigy", "Smack My Bitch Up"],
     [96, "The Smashing Pumpkins", "1979"],
     [97, "Tori Amos", "Cornflake Girl"],
+    [98, "Fatboy Slim", "The Rockerfeller Skank"],
+    [99, "Harvey Danger", "Flagpole Sitta"],
+    [100, "The Breeders", "Cannonball"],
+
+
 
 
 
