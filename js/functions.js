@@ -52,23 +52,20 @@ function chooseSong(array_name, categoryName, group, buttonID) {
 
 
 
-        //document.getElementById("categoryTitle").innerText = groupName + ": " + currentSongArray.length + " songs";
         document.getElementById("songsPlayed").innerText = playedSongArray.length;
         document.getElementById("songsRemaining").innerText = currentSongArray.length - playedSongArray.length;
 
 
         let playButton = document.getElementById("playASong");
         playButton.textContent = "Play a Song";
-        //let catTitle = group;
-        //document.getElementById("categoryTitle").innerText = groupName;
-        //getRandomSong();
+
     } else {
         console.log("All chosen ", categoryName, group);
         resetButtonColors(buttonID);
         groupName = "All";
         playedSongArray = [];
-        //document.getElementById("songsPlayed").innerText = playedSongArray.length;
-        //document.getElementById("songsRemaining").innerText = arraysLength - playedSongArray.length;
+        document.getElementById("songsPlayed").innerText = playedSongArray.length;
+        document.getElementById("songsRemaining").innerText = arraysLength - playedSongArray.length;
 
     }
 

@@ -23,7 +23,9 @@ function getAllArraysLength() {
     };
 
     return len;
-}
+};
+
+
 
 function getUnusedItem() {
 
@@ -44,7 +46,7 @@ function getUnusedItem() {
 
         keepTrackOfPlayedSongs(chosenSongArray, chosenItem);
 
-        let categoryEntry = chosenTitles;
+        //let categoryEntry = chosenTitles;
         document.getElementById("answer1").innerText = chosenTitles[1];
         document.getElementById("answer2").innerText = '"' + chosenTitles[2] + '"';
         document.getElementById("songsPlayed").innerText = playedSongArray.length;
@@ -64,7 +66,6 @@ function getUnusedItem() {
 
 function playAllSongs() {
 
-
     let newItem;
     let myPromise = new Promise(function(myResolve, myReject) {
 
@@ -78,6 +79,7 @@ function playAllSongs() {
             console.log("All done");
             document.getElementById("answer1").innerText = "All songs played";
             document.getElementById("answer2").innerText = "";
+
             let playButton = document.getElementById("playASong");
             playButton.textContent = "All Songs Played";
             return;
