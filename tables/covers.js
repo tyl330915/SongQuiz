@@ -157,8 +157,11 @@ const covers = [
     [156, "Wilburt Harrison (Bryan Ferry)", "Let's Stick Together"],
     [157, "Bob Marley (Eric Clapton)", "I Shot The Sheriff"],
     [158, "Keane (Lily Allen)", "Somewhere Only We Know"],
-    [159, "Rod Stewart", "Reason to Believe"],
-    [160, "Funboy Three", "Our Lips Are Sealed"],
-    [161, "Roxy Music", "Jealous Guy"],
+    [159, "Tim Hardin (Rod Stewart)", "Reason to Believe"],
+    [160, "The Go-Gos (Funboy 3)", "Our Lips Are Sealed"],
+    [161, "John Lennon (Roxy Music)", "Jealous Guy"],
+	[162, "The Cure (Adele)", "Lovesong"],
+	[163, "Taylor Swift (Imagine Dragons)", "Blank Space"],
+	[164, "Taylor Swift (Yungblud)", "Cardigan"],
 
 ];
