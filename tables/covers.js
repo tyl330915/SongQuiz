@@ -161,7 +161,6 @@ const covers = [
     [160, "The Go-Gos (Funboy 3)", "Our Lips Are Sealed"],
     [161, "John Lennon (Roxy Music)", "Jealous Guy"],
 	[162, "The Cure (Adele)", "Lovesong"],
-	[163, "Taylor Swift (Imagine Dragons)", "Blank Space"],
-	[164, "Taylor Swift (Yungblud)", "Cardigan"],
+	[163, "Taylor Swift (Yungblud)", "Cardigan"],
 
 ];
