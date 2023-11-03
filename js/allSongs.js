@@ -148,10 +148,11 @@ function getPlayedCategoryCount(cat, catMax) {
 };
 
 function showInstructions(categ) {
+    console.log(categ);
     if (categ.includes("Disney")) {
         document.getElementById("instructions1").innerText = categ;
         document.getElementById("instructions2").innerText = "Name the song and the movie";
-    } else if (categ.includes("Covers")) {
+    } else if (categ.includes("Cover")) {
         document.getElementById("instructions1").innerText = categ + ": Name the song and ORIGINAL artist";
         document.getElementById("instructions2").innerText = "(Bonus point for naming the covering artist.)";
     } else {

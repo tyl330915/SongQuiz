@@ -25,6 +25,7 @@
     body {
         background-color: #F0F0F0;
         max-height: 95%;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
     #heading {
@@ -69,10 +70,23 @@
         justify-content: center;
     }
     
-    #instructions1,
+    #instructions1 {
+        color: white;
+        font-size: 2vw;
+        font-weight: bold;
+        min-height: 3%;
+        background-color: darkred;
+        border-radius: 20px;
+        width: fit-content;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
     #instructions2 {
-        color: darkred;
-        font-size: 2.5vw;
+        font-size: 2vw;
+        font-weight: bold;
         min-height: 3%;
     }
     
@@ -157,7 +171,7 @@
 <body>
     <div id="heading" class="centered">
         <div>Song Quiz</div>
-        <div id="version">v.0.2</div>
+        <div id="version">v.0.3</div>
     </div>
 
     <!--div id="categoryTitle" class="centered">Pick a Category</div-->
