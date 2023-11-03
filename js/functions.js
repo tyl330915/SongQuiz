@@ -260,3 +260,29 @@ function resetButtonColors(butID) {
     document.getElementById(butID).style.backgroundColor = "darkred";
 
 };
+
+function createBubble(tube) {
+    var bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.style.width = Math.random() * 20 + 10 + '%';
+    bubble.style.left = Math.random() * 100 + '%';
+    bubble.style.animationDuration = Math.random() * 4 + 8 + 's'; // Random animation duration between 2 and 4 seconds
+    tube.appendChild(bubble);
+    setTimeout(function() {
+        tube.removeChild(bubble);
+    }, 10000);
+}
+
+function randomInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function createBubbles() {
+    var tubes = document.getElementsByClassName('bubbler-tube');
+    for (var i = 0; i < tubes.length; i++) {
+        createBubble(tubes[i]);
+    }
+    setTimeout(createBubbles, randomInterval(50, 100));
+}
+
+createBubbles();

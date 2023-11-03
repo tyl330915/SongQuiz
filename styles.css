@@ -1,0 +1,233 @@
+body {
+    background-color: #F0F0F0;
+    max-height: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.middleRow {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    width: 60%;
+    box-sizing: border-box;
+    text-align: center;
+    /* Centers text horizontally */
+    padding: 20px 0;
+    /* Adds vertical padding */
+}
+
+.bubbleColumn {
+    width: 20%;
+    height: 60%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#heading {
+    font-size: 3vw;
+    width: 60%;
+    margin-top: 2%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    border: 1px solid black;
+    background-color: orange;
+    border-radius: 25px;
+}
+
+#player {
+    border: 1px solid black;
+    min-width: 70%;
+    border-radius: 25px;
+}
+
+#playerDiv {
+    margin: auto;
+    width: 70%;
+}
+
+#version {
+    font-size: 1vw;
+    display: inline-block;
+}
+
+#songTable {
+    visibility: hidden;
+}
+
+#instructions1 {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+    font-weight: bold;
+    min-height: 3%;
+    background-color: darkred;
+    border-radius: 20px;
+    width: fit-content;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#instructions2 {
+    color: darkred;
+    font-size: 2vw;
+    font-weight: bold;
+    min-height: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#decades {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.decadeButton {
+    background-color: #008CBA;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    margin: 2px;
+}
+
+.decadeButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#playASong {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 12px 27px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    margin: 2px;
+}
+
+#playASong:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#categoryTitle {
+    font-size: 1.5vw;
+}
+
+#songStats {
+    font-size: 2vw;
+}
+
+#answers {
+    max-width: 80%;
+    background-color: orange;
+    border: 1px solid;
+    font-size: 2.5vw;
+    margin: auto;
+    border-radius: 25px;
+    visibility: hidden;
+}
+
+#answer1,
+#answer2 {
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+#showTable {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 20px;
+}
+
+@keyframes bubble {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+
+.bubbler-tube {
+    position: relative;
+    width: 50px;
+    height: 700px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+#bubbler-tube4 {
+    background: lightblue;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+}
+
+#bubbler-tube1 {
+    background: darkred;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+}
+
+#bubbler-tube3 {
+    background: lightgreen;
+    box-shadow: 0 0 10px #008000, 0 0 20px #008000, 0 0 30px #008000, 0 0 40px #008000;
+}
+
+#bubbler-tube2 {
+    background: orange;
+    box-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ffa500;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: bubble 4s linear infinite;
+}
+
+.bubble::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}

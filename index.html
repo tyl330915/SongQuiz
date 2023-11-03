@@ -18,258 +18,126 @@
     <script src="./js/allSongs.js" type="text/javascript" charset="utf-8"></script>
 
     <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!--script src="./tables/temp.js" type="text/javascript" charset="utf-8"></script-->
 
 </head>
 <style>
-    body {
-        background-color: #F0F0F0;
-        max-height: 95%;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    #heading {
-        font-size: 3vw;
-        width: 70%;
-        margin-top: 2%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        color: white;
-        border: 1px solid black;
-        background-color: darkred;
-        border-radius: 25px;
-    }
-    
-    #player {
-        border: 1px solid black;
-        min-width: 70%;
-        border-radius: 25px;
-    }
-    
-    #playerDiv {
-        margin: auto;
-        width: 70%;
-    }
-    
-    #version {
-        font-size: 1vw;
-        display: inline-block;
-    }
-    
-    #songTable {
-        visibility: hidden;
-    }
-    
-    #answers {
-        visibility: hidden;
-    }
-    
-    .centered {
-        display: flex;
-        justify-content: center;
-    }
-    
-    #instructions1 {
-        color: white;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 2vw;
-        font-weight: bold;
-        min-height: 3%;
-        background-color: darkred;
-        border-radius: 20px;
-        width: fit-content;
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    
-    #instructions2 {
-        color: darkred;
-        font-size: 2vw;
-        font-weight: bold;
-        min-height: 3%;
-    }
-    
-    #decades {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .decadeButton {
-        background-color: #008CBA;
-        /* Green */
-        border: none;
-        color: white;
-        padding: 10px 25px;
-        border-radius: 12px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1.5vw;
-        margin: 2px;
-    }
-    
-    .decadeButton:hover {
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    #playASong {
-        background-color: darkred;
-        border: none;
-        color: white;
-        padding: 12px 27px;
-        border-radius: 50%;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 2vw;
-        margin: 2px;
-    }
-    
-    #playASong:hover {
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    #categoryTitle {
-        font-size: 1.5vw;
-    }
-    
-    #songStats {
-        font-size: 2vw;
-    }
-    
-    #answers {
-        max-width: 70%;
-        background-color: beige;
-        border: 1px solid;
-        font-size: 3vw;
-        margin: auto;
-        border-radius: 25px;
-    }
-    
-    #answer1,
-    #answer2 {
-        margin-left: 2%;
-        margin-right: 2%;
-        text-align: center;
-    }
-    
-    #showTable {
-        background-color: #008CBA;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        border-radius: 12px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        margin: 20px;
-    }
+
 </style>
 
 <body>
-    <div id="heading" class="centered">
-        <div>Song Quiz</div>
-        <div id="version">v.0.3</div>
-    </div>
-
-    <!--div id="categoryTitle" class="centered">Pick a Category</div-->
-
-    <div id="decades" class="centered">
-
-        <button class="decadeButton" id="sixtiesButton" onclick="return chooseSong(sixties,'sixtiesSongs', 'Sixties', this.id)">60s</button>
-        <button class="decadeButton" id="seventiesButton" onclick="return chooseSong(seventies,'seventiesSongs', 'Seventies',this.id)">70s</button>
-        <button class="decadeButton" id="eightiesButton" onclick="return chooseSong(eighties,'eightiesSongs', 'Eighties',this.id)">80s</button>
-        <button class="decadeButton" id="ninetiesButton" onclick="return chooseSong(nineties,'ninetiesSongs', 'Nineties',this.id)">90s</button>
-        <button class="decadeButton" id="2000sButton" onclick="return chooseSong(twoThousands,'twoThousandsSongs', '2000s',this.id)">2000s</button>
-        <button class="decadeButton" id="2010sButton" onclick="return chooseSong(twentyTens,'twentyTenSongs', '2010s',this.id)">2010s</button>
-        <button class="decadeButton" id="2020sButton" onclick="return chooseSong(twentyTwenties,'twentyTwentiesSongs', '2020s',this.id)">2020s</button>
-    </div>
-
-    <div id="topics" class="centered">
-        <p></p>
-        <button class="decadeButton" id="disneyButton" onclick="return chooseSong(disney,'disneySongs', 'Disney', this.id)">Disney</button>
-        <button class="decadeButton" id="rockButton" onclick="return chooseSong(rock,'rockSongs', 'Rock',this.id)">Rock</button>
-        <button class="decadeButton" id="protestButton" onclick="return chooseSong(protest,'protestSongs', 'Protest',this.id)">Protest</button>
-        <button class="decadeButton" id="coverButton" onclick="return chooseSong(covers,'coverSongs', 'Cover Songs',this.id)">Covers</button>
-        <button class="decadeButton" id="allButton" onclick="return chooseSong(all,'allSongs', 'All',this.id)">All</button>
-        <!--button class="decadeButton" id="tempButton" onclick="return chooseSong(temp,'tempSongs', 'Temp',this.id)">Temp</button-->
-    </div>
+    <div class="container">
 
 
-    <p></p>
-    <p></p>
-    <p></p>
+        <div class="row">
 
+            <div id="heading" style="display: inline-block;">
+                <div>Song Quiz
+                    <div id="version" style="display: inline-block">v.0.3</div>
+                </div>
+            </div>
 
-    <div id="instructions1" class="centered">Pick a Category</div><br>
-    <div id="instructions2" class="centered"></div>
-
-
-    <p> </p>
-    <p></p>
-
-    <div id="playerDiv" class="centered">
-        <div>
-            <audio id="player" controls="controls">
-            <source id="mp3_src" src="" type="audio/mp3" />
-            Your browser does not support the audio element.
-      </audio>
         </div>
 
-        <div>
-            <p></p>
-            <p></p>
-            <button id="playASong" onclick="getRandomSong()" style="margin-left: 20px;">Play a Song</button>
+        <div class="middleRow">
+            <div class="bubbleColumn">
+                <div id="bubbler-tube1" class="bubbler-tube"></div>
+                <div id="bubbler-tube2" class="bubbler-tube" style="margin-left: 10%"></div>
+            </div>
+
+            <div class="column centered">
+                <div id="decades">
+
+                    <button class="decadeButton" id="sixtiesButton" onclick="return chooseSong(sixties, 'sixtiesSongs', 'Sixties', this.id)">60s</button>
+                    <button class="decadeButton" id="seventiesButton" onclick="return chooseSong(seventies, 'seventiesSongs', 'Seventies',this.id)">70s</button>
+                    <button class="decadeButton" id="eightiesButton" onclick="return chooseSong(eighties, 'eightiesSongs', 'Eighties',this.id)">80s</button>
+                    <button class="decadeButton" id="ninetiesButton" onclick="return chooseSong(nineties, 'ninetiesSongs', 'Nineties',this.id)">90s</button>
+                    <button class="decadeButton" id="2000sButton" onclick="return chooseSong(twoThousands, 'twoThousandsSongs', '2000s',this.id)">2000s</button>
+                    <button class="decadeButton" id="2010sButton" onclick="return chooseSong(twentyTens, 'twentyTenSongs', '2010s',this.id)">2010s</button>
+                    <button class="decadeButton" id="2020sButton" onclick="return chooseSong(twentyTwenties, 'twentyTwentiesSongs', '2020s',this.id)">2020s</button>
+                </div>
+
+                <div id="topics">
+                    <p></p>
+                    <button class="decadeButton" id="disneyButton" onclick="return chooseSong(disney, 'disneySongs', 'Disney', this.id)">Disney</button>
+                    <button class="decadeButton" id="rockButton" onclick="return chooseSong(rock, 'rockSongs', 'Rock',this.id)">Rock</button>
+                    <button class="decadeButton" id="protestButton" onclick="return chooseSong(protest, 'protestSongs', 'Protest',this.id)">Protest</button>
+                    <button class="decadeButton" id="coverButton" onclick="return chooseSong(covers, 'coverSongs', 'Cover Songs',this.id)">Covers</button>
+                    <button class="decadeButton" id="allButton" onclick="return chooseSong(all, 'allSongs', 'All',this.id)">All</button>
+                    <!--button class="decadeButton" id="tempButton" onclick="return chooseSong(temp, 'tempSongs', 'Temp',this.id)">Temp</button-->
+                </div>
+
+
+                <p></p>
+                <p></p>
+                <p></p>
+
+
+
+                <div id="instructions1">Pick a Category</div><br>
+                <div id="instructions2"></div>
+
+
+                <p> </p>
+                <p></p>
+
+                <div id="playerDiv" class="row" style="display: flex; align-items: center;">
+                    <audio id="player" controls="controls">
+                    <source id="mp3_src" src="" type="audio/mp3" />
+                        Your browser does not support the audio element.
+                        </audio>
+                    <button id="playASong" onclick="getRandomSong()" style="margin-left: 20px;">Play a Song</button>
+                </div>
+
+
+                <p></p>
+                <div id="songStats" class="row">
+                    <div>Songs Played:&nbsp;</div>
+                    <div id="songsPlayed">&nbsp;</div>
+                    <div style="margin-left: 30px;">Songs remaining:</div>
+                    <div id="songsRemaining"></div>
+                </div>
+
+
+                <p></p>
+                <div id="answerButton">
+                    <button id="showAnswers" class="decadeButton">Show Answer</button>
+                </div>
+                <p></p>
+                <div>
+                    <input type="checkbox" id="showAns" value="showAns" checked="checked">
+                    <label for="showAns">Hide the answer for each new song.</label><br>
+                </div>
+
+                <p></p>
+
+                <div id="answers">
+                    <div id='answer1'></div>
+                    <div id='answer2'></div>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="bubbleColumn">
+                <div id="bubbler-tube2" class="bubbler-tube"></div>
+                <div id="bubbler-tube1" class="bubbler-tube" style="margin-left: 10%"></div>
+            </div>
         </div>
+
     </div>
 
+    <!--div id="categoryTitle" >Pick a Category</div-->
 
-    <p></p>
-    <div id="songStats" class="centered">
-        <div>Songs Played:&nbsp;</div>
-        <div id="songsPlayed">&nbsp;</div>
-        <div style="margin-left: 30px; margin-right: 5px;">Songs remaining:</div>
-        <div id="songsRemaining"></div>
+
+
+
+
     </div>
-
-
-    <p></p>
-    <div id="answerButton" class="centered">
-        <button id="showAnswers" class="decadeButton">Show Answer</button>
-    </div>
-    <p></p>
-    <div class="centered">
-        <input type="checkbox" id="showAns" value="showAns" checked="checked">
-        <label for="showAns">Hide the answer for each new song.</label><br>
-    </div>
-
-    <p></p>
-
-    <div id="answers">
-        <div id='answer1' class="centered"></div>
-        <div id='answer2' class="centered"></div>
-    </div>
-
-
-    <p></p>
-    <div class="centered">
-        <!--Temporarily not using table view
-        <p></p><button id="showTable" class="centered">Show Table</button--->
-    </div>
-    <p></p>
-    <div class="centered">
-
-        <table id="songTable"></table>
-    </div>
-
-
-
-
 
 </body>
 
@@ -280,7 +148,7 @@
 
     answerButton.addEventListener('click', function handleClick() {
 
-        console.log("Visibility: ", answerDiv.style.visibility);
+        console.log("Visibility:", answerDiv.style.visibility);
 
         if (answerDiv.style.visibility === 'hidden') {
             answerDiv.style.visibility = 'visible';
