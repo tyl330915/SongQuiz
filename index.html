@@ -28,18 +28,6 @@
 
 <body>
     <div class="container">
-
-
-        <div class="row">
-
-            <div id="heading" style="display: inline-block;">
-                <div>Song Quiz
-                    <div id="version" style="display: inline-block">v.0.3</div>
-                </div>
-            </div>
-
-        </div>
-
         <div class="middleRow">
             <div class="bubbleColumn">
                 <div id="bubbler-tube1" class="bubbler-tube"></div>
@@ -47,6 +35,15 @@
             </div>
 
             <div class="column centered">
+
+                <div id="heading" style="display: inline-block;">
+                    <div>Song Quiz
+                        <div id="version" style="display: inline-block"><sup>v.0.3</sup></div>
+                    </div>
+                </div>
+                <p></p>
+
+
                 <div id="decades">
 
                     <button class="decadeButton" id="sixtiesButton" onclick="return chooseSong(sixties, 'sixtiesSongs', 'Sixties', this.id)">60s</button>
@@ -95,7 +92,7 @@
                 <div id="songStats" class="row">
                     <div>Songs Played:&nbsp;</div>
                     <div id="songsPlayed">&nbsp;</div>
-                    <div style="margin-left: 30px;">Songs remaining:</div>
+                    <div style="margin-left: 30px;">Songs remaining:&nbsp; </div>
                     <div id="songsRemaining"></div>
                 </div>
 
