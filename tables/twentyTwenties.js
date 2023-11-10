@@ -97,6 +97,8 @@ const twentyTwenties = [
     [96, "Jack Harlow", "First Class"],
     [97, "Harry Styles", "As It Was"],
     [98, "Anthony Oliver", "Rich Men North of Richmond"],
+    [99, "The Cramps", "Goo Goo Muck"],
+
 
 
 
