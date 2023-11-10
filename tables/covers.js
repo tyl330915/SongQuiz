@@ -160,7 +160,15 @@ const covers = [
     [159, "Tim Hardin (Rod Stewart)", "Reason to Believe"],
     [160, "The Go-Gos (Funboy 3)", "Our Lips Are Sealed"],
     [161, "John Lennon (Roxy Music)", "Jealous Guy"],
-	[162, "The Cure (Adele)", "Lovesong"],
-	[163, "Taylor Swift (Yungblud)", "Cardigan"],
+    [162, "The Cure (Adele)", "Lovesong"],
+    [163, "Taylor Swift (Yungblud)", "Cardigan"],
+    [164, "The Beach Boys (David Bowie)", "God Only Knows"],
+    [165, "Tracey Chapman (Luke Combs)", "Fast Car"],
+    [166, "The Beatles (William Shatner)", "Lucy in the Sky with Diamonds"],
+    [167, "Rod Stewart (Paris Hilton)", "Do Ya Think I'm Sexy?"],
+    [168, "Don MacLean (Madonna)", "American Pie"],
+    [169, "Joan Jett (Britney Spears)", "I love rock and roll"],
+
+
 
 ];
