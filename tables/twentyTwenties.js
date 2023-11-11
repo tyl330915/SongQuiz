@@ -98,6 +98,7 @@ const twentyTwenties = [
     [97, "Harry Styles", "As It Was"],
     [98, "Anthony Oliver", "Rich Men North of Richmond"],
     [99, "The Cramps", "Goo Goo Muck"],
+    [100, "boygenius", "Not Strong Enough"],
 
 
 
