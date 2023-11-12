@@ -69,7 +69,11 @@ function playAllSongs() {
     let newItem;
     let myPromise = new Promise(function(myResolve, myReject) {
 
+        console.log(playedSongArray.length + " songs played so far/", arraysLength);
+
         if (playedSongArray.length < arraysLength) {
+            let playButton = document.getElementById("playASong");
+            playButton.textContent = "Play a Song";
             do {
                 newItem = getUnusedItem();
             } while (newItem === undefined);
@@ -80,7 +84,7 @@ function playAllSongs() {
             document.getElementById("answer1").innerText = "All songs played";
             document.getElementById("answer2").innerText = "";
 
-            let playButton = document.getElementById("playASong");
+            //let playButton = document.getElementById("playASong");
             playButton.textContent = "All Songs Played";
             return;
         }
@@ -113,17 +117,12 @@ function getTitles(songCat, songCatNum, currRand, allLength) {
 
 
     let catMax = allCategories[songCatNum][0].length;
-
-
     let playedCategoryCount = getPlayedCategoryCount(songCat, catMax);
 
     playedNumber = playedSongArray.length;
     document.getElementById("songsPlayed").innerText = playedNumber;
     document.getElementById("songsRemaining").innerText = allLength - playedNumber;
-    //console.log(playedSongArray);
-
-
-
+    console.log(playedCategoryCount, songCat, catMax);
 };
 
 function getPlayedCategoryCount(cat, catMax) {
