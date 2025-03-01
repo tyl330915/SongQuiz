@@ -1,5 +1,5 @@
 const protest = [
-    [1, "Little Steven/Artists Against Apartheid", "(Ain't Going to Play) Sun City"],
+    [1, "Little Stevemonkeyn/Artists Against Apartheid", "(Ain't Going to Play) Sun City"],
     [2, "Talking Heads", "[Nothing But] Flowers"],
     [3, "Tennessee Ernie Ford ", "16 Tons"],
     [4, "Nena", "99 Red Balloons"],

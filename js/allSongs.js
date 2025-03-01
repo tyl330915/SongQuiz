@@ -7,6 +7,7 @@ const allCategories = [
     [twoThousands, 'twoThousandsSongs', '2000s'],
     [twentyTens, 'twentyTenSongs', '2010s'],
     [twentyTwenties, 'twentyTwentiesSongs', '2020s'],
+    [games, 'gameSongs', 'Games'],
     [rock, 'rockSongs', 'Rock'],
     [protest, 'protestSongs', 'Protest'],
     [covers, 'coverSongs', "Covers"]
