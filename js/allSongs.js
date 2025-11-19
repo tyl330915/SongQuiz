@@ -71,6 +71,7 @@ function playAllSongs() {
     let myPromise = new Promise(function(myResolve, myReject) {
 
         console.log(playedSongArray.length + " songs played so far/", arraysLength);
+        showInstructions("All");
 
         if (playedSongArray.length < arraysLength) {
             let playButton = document.getElementById("playASong");
@@ -93,10 +94,7 @@ function playAllSongs() {
     myPromise.then(
         function(value) {
             playSong(currentSong);
-        } //,
-        //function(error) {
-        //    console.log(myReject);
-        //}
+        } 
     );
 
 };
