@@ -99,6 +99,8 @@ const twentyTwenties = [
     [98, "Anthony Oliver", "Rich Men North of Richmond"],
     [99, "The Cramps", "Goo Goo Muck"],
     [100, "boygenius", "Not Strong Enough"],
+    [101, "boygenius", "Cool About It"],
+    [102, "Wet Leg", "Chaise Longue"]
 
 
 
