@@ -151,6 +151,9 @@ function showInstructions(categ) {
     if (categ.includes("Disney")) {
         document.getElementById("instructions1").innerText = categ;
         document.getElementById("instructions2").innerText = "Name the song and the movie";
+    } else if (categ.includes("Musicals")) {
+        document.getElementById("instructions1").innerText = categ;
+        document.getElementById("instructions2").innerText = "Name the song and the musical";
     } else if (categ.includes("Cover")) {
         document.getElementById("instructions1").innerText = categ + ": Name the song and ORIGINAL artist";
         document.getElementById("instructions2").innerText = "(Bonus point for naming the covering artist.)";
